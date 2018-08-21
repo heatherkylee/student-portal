@@ -34,10 +34,21 @@ var HomePage = {
   template: "#home-page",
   data: function() {
     return {
+      message: "Welcome to The Student Portal!",
+      users: [],
+      resumes: [],
+      capstones: [],
+      education: [],
+      skills: [],
+      experiences: []
+
       message: "Home"
     };
   },
-  created: function() {},
+  created: function() {
+    console.log('in the created function')
+    
+  },
   methods: {},
   computed: {}
 };
