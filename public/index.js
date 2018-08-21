@@ -57,7 +57,7 @@ var HomePage = {
   data: function() {
     return {
       message: "Welcome to The Student Portal!",
-      users: [],
+      students: [],
       resumes: [],
       capstones: [],
       education: [],
@@ -66,10 +66,13 @@ var HomePage = {
     };
   },
   created: function() {
-    console.log('in the created function')
-    // axios.get('http://localhost:3000/api/user').then(function (response) {
-    //   this.user = response.data;
-    // }.bind(this))
+    console.log('in the created function');
+
+    axios.get('http://localhost:3001/api/students').then(function (response) {
+      this.students = response.data;
+    }.bind(this));
+    // console.log(response.data);
+
     
   },
   methods: {},

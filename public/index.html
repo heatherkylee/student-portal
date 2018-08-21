@@ -54,12 +54,8 @@
 <template id="home-page">
   <div class="container">
     <div class="vue-component">
-    <h1>{{ message }}</h1>
-    <a href="/#/login">Login</a>
-    <a href="/#/logout">Logout</a>
-
-    <p> Resumes </p>
-
+      <h1>{{ message }}</h1>
+      <p> Resumes </p>
       <div v-for="user in users">
         <p> {{user.name}}</p>
       </div>
