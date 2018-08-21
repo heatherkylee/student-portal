@@ -26,7 +26,25 @@ var UserEditPage = {
     //   this.user = response.data;
     // }.bind(this));
   },
-  methods: {},
+  methods: {
+    submit: function() {
+      var params = {
+        first_name: this.userInfo.first_name,
+        last_name: this.userInfo.last_name,
+        email: this.userInfo.email,
+        phone_number: this.userInfo.phone_number,
+        short_bio: this.userInfo.short_bio,
+        linkedin_url: this.userInfo.linkedin_url,
+        twitter_handle: this.userInfo.twitter_handle,
+        website_url: this.userInfo.website_url,
+        online_resume_url: this.userInfo.online_resume_url,
+        github_url: this.userInfo.github_url,
+        photo_url: this.userInfo.photo_url
+      }
+      console.log(params);
+      console.log("submit!");
+    }
+  },
   computed: {}
 };
 
@@ -46,6 +64,9 @@ var HomePage = {
   },
   created: function() {
     console.log('in the created function')
+    // axios.get('http://localhost:3000/api/user').then(function (response) {
+    //   this.user = response.data;
+    // }.bind(this))
     
   },
   methods: {},
