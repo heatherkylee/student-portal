@@ -4,10 +4,19 @@ var HomePage = {
   template: "#home-page",
   data: function() {
     return {
-      message: "Welcome to Vue.js!"
+      message: "Welcome to The Student Portal!",
+      users: [],
+      resumes: [],
+      capstones: [],
+      education: [],
+      skills: [],
+      experiences: []
     };
   },
-  created: function() {},
+  created: function() {
+    console.log('in the created function')
+    
+  },
   methods: {},
   computed: {}
 };
