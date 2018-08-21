@@ -34,14 +34,13 @@ var HomePage = {
   template: "#home-page",
   data: function() {
     return {
-      message: "Welcome to The Student Portal!",
+      // message: "Welcome to The Student Portal!",
       users: [],
       resumes: [],
       capstones: [],
       education: [],
       skills: [],
-      experiences: []
-
+      experiences: [],
       message: "Home"
     };
   },
@@ -116,6 +115,8 @@ var app = new Vue({
     var jwt = localStorage.getItem("jwt");
     if (jwt) {
       axios.defaults.headers.common["Authorization"] = jwt;
+      console.log('jwt');
+      console.log(jwt);
     }
   }
 });
