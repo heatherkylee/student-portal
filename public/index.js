@@ -59,7 +59,7 @@ var LoginPage = {
         email: this.email, password: this.password
       };
       axios
-        .post("/api/sessions", params)
+        .post("http://localhost:3000/api/sessions", params)
         .then(function(response) {
           axios.defaults.headers.common["Authorization"] =
             "Bearer " + response.data.jwt;
