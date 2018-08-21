@@ -47,6 +47,9 @@ var HomePage = {
   },
   created: function() {
     console.log('in the created function')
+    // axios.get('http://localhost:3000/api/user').then(function (response) {
+    //   this.user = response.data;
+    // }.bind(this))
     
   },
   methods: {},
