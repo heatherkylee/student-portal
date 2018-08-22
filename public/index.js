@@ -52,21 +52,22 @@ var HomePage = {
   template: "#home-page",
   data: function() {
     return {
-      // message: "Welcome to The Student Portal!",
-      users: [],
+      message: "Welcome to The Student Portal!",
+      students: [],
       resumes: [],
       capstones: [],
       education: [],
       skills: [],
-      experiences: [],
-      message: "Home"
+      experiences: []
     };
   },
   created: function() {
     console.log('in the created function');
-    axios.get('http://localhost:3000/api/user').then(function(response) {
-      this.user = response.data;
+
+    axios.get('http://localhost:3001/api/students').then(function(response) {
+      this.students = response.data;
     }.bind(this));
+    // console.log(response.data);
     
   },
   methods: {},
