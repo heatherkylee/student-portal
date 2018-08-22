@@ -59,7 +59,23 @@
     <p> Resumes </p>
 
     <div v-for="student in students">
-      <p>{{student.first_name}}</p>
+      <p>First Name: {{student.first_name}}</p>
+      <p>Last Name: {{student.last_name}}</p>
+      <p>Bio: {{student.short_bio}}</p>
+      <p>LinkedIn: {{student.linkedin_url}}</p>
+      <!-- <div v-for="experience in experiences"> -->
+        <p>Experiences: {{student.experiences}}</p>
+        
+      <!-- </div> -->
+      
+      <p>Skills: {{student.skills}}</p>
+
+      <hr>
+
+
+
+
+
       
     </div>
   </div>
