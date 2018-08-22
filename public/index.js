@@ -68,11 +68,10 @@ var HomePage = {
   created: function() {
     console.log('in the created function');
 
-    axios.get('http://localhost:3001/api/students').then(function (response) {
+    axios.get('http://localhost:3000/api/students').then(function (response) {
       this.students = response.data;
     }.bind(this));
     // console.log(response.data);
-
     
   },
   methods: {},
@@ -142,6 +141,8 @@ var app = new Vue({
     var jwt = localStorage.getItem("jwt");
     if (jwt) {
       axios.defaults.headers.common["Authorization"] = jwt;
+      console.log('jwt');
+      console.log(jwt);
     }
   }
 });
