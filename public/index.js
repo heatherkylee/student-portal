@@ -7,6 +7,7 @@ var UserEditPage = {
     return {
       message: "UserEditPage",
       userInfo: {
+        id: "",
         first_name: "first_name",
         last_name: "last_name",
         email: "email",
@@ -22,9 +23,9 @@ var UserEditPage = {
     };
   },
   created: function() {
-    // axios.get('/api/user').then(function (response) {
-    //   this.user = response.data;
-    // }.bind(this));
+    axios.get('/api/user/' + this.userInfo.id).then(function (response) {
+      this.userInfo = response.data;
+    }.bind(this));
   },
   methods: {
     submit: function() {
@@ -43,6 +44,9 @@ var UserEditPage = {
       }
       console.log(params);
       console.log("submit!");
+      axios.patch ('/api/user/' + this.userInfo.id, params).then(function (response) {
+        console.log('patch request sent');
+      });
     }
   },
   computed: {}
@@ -59,7 +63,7 @@ var HomePage = {
       education: [],
       skills: [],
       experiences: []
-  };
+    };
   },
   created: function() {
     console.log('in the created function');
