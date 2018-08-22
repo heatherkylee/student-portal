@@ -54,11 +54,24 @@
 <template id="home-page">
   <div class="container">
     <div class="vue-component">
-      <h1>{{ message }}</h1>
-      <p> Resumes </p>
-      <div v-for="user in users">
-        <p> {{user.name}}</p>
-      </div>
+    <h1>{{ message }}</h1>
+    
+    <p> Resumes </p>
+
+    <div v-for="student in students">
+      <p>First Name: {{student.first_name}}</p>
+      <p>Last Name: {{student.last_name}}</p>
+      <p>Bio: {{student.short_bio}}</p>
+      <p>LinkedIn: {{student.linkedin_url}}</p>
+      <!-- <div v-for="experience in experiences"> -->
+        <p>Experiences: {{student.experiences}}</p>
+        
+      <!-- </div> -->
+      
+      <p>Skills: {{student.skills}}</p>
+
+      <hr>
+
     </div>
   </div>
 </template>
